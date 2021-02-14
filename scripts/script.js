@@ -3,8 +3,8 @@ const fetchProducts = async () => {
     const products = await fetch('https://fakestoreapi.com/products').then(response => response.json());
     localStorage.setItem('products', JSON.stringify(products));
 }
-window.addEventListener('DOMContentLoaded', () => {
-    fetchProducts();
+window.addEventListener('DOMContentLoaded', async () => {
+    await fetchProducts();
     const prodList = document.getElementById('product-list');
     const products = JSON.parse(localStorage.getItem('products'));
 
@@ -17,4 +17,5 @@ window.addEventListener('DOMContentLoaded', () => {
         const productElem = new ProductItem(product, addedToCart);
         prodList.appendChild(productElem);
     });
+    
 });
