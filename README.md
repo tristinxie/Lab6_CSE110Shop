@@ -2,4 +2,4 @@
 
 Name: Tristin Xie
 
-URL: 
+URL: http://www.tristinxie.com/Lab6_CSE110Shop/
