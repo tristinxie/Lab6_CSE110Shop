@@ -4,7 +4,7 @@ const fetchProducts = async () => {
     localStorage.setItem('products', JSON.stringify(products));
 }
 window.addEventListener('DOMContentLoaded', async () => {
-    if(localStorage.getItem('products') === ""){
+    if(localStorage.getItem('products') === null){
         await fetchProducts();
     }
     const prodList = document.getElementById('product-list');
